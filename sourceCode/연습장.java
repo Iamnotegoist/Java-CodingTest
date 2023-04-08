@@ -1,4 +1,4 @@
-package java_codingTest;
+package java_codingTest.sourceCode;
 
 import java.util.ArrayList;
 import java.util.List;
