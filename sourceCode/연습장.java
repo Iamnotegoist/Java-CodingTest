@@ -1,29 +1,19 @@
 package java_codingTest.sourceCode;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class 연습장 {
 	
-	private static final char[] chars = "AEIOU".toCharArray();
-	
-	private static void generate(String word, List<String> words) {
-		words.add(word);
-		
-		if(word.length() == 5) {
-			return;
-		}
-		
-		for(char c : chars) {
-			generate(word + c, words);
-		}
-			
-		
-	}
 	public static void main(String[] args) {
-		List<String> words = new ArrayList<>();
-		generate("", words);
+		int[] arr = {5, 3, 7, 4, 7, 4, 0, 9};
 		
-		System.out.println(words.indexOf("I"));
+		int[] reversed = Arrays.stream(arr) // int[]형인 arr을 IntStream으로 변환
+							   .boxed() // boxed()를 사용하여 Stream<Integer>로 변환
+							   .sorted((v1, v2) -> v2 - v1)
+							   .mapToInt(Integer::intValue)
+							   .toArray();
+		Comparator
+		System.out.println(Arrays.toString(reversed));
+		
 	}
 }

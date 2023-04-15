@@ -16,7 +16,7 @@ public class 프로그래머스_K번째수 {
 			int to = command[1];
 			int k = command[2] - 1;
 			
-			int[] sub = Arrays.copyOfRange(array, from, to);
+			int[] sub = Arrays.copyOfRange(array, from, to);   // Arrays.copyOfRange(int[] original, int from, int to) ==> 원하는 구간으로 배열을 자름 
 			Arrays.sort(sub);
 			answer[i] = sub[k];
 		}
